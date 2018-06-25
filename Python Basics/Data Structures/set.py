@@ -1,7 +1,4 @@
 a = set([1, 2, 3])
-
-b = set([2, 3, 4])
-
 b = set([2, 3, 4, 5])
 
 #different methods on set
