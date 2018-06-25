@@ -1,9 +1,5 @@
 a = set([1, 2, 3])
-<<<<<<< HEAD
-b = set([2, 3, 4])
-=======
 b = set([2, 3, 4, 5])
->>>>>>> a868250a314ce4f3c674386c39946139f998f1fa
 
 #different methods on set
 
