@@ -11,8 +11,14 @@ class Question(models.Model):
     def __str__(self):
     	return self.question_text
     def was_pub_recently(self):
-    	return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-
+        if self.pub_date >= timezone.now() - datetime.timedelta(days=1) and self.pub_date <=timezone.now():
+            return True
+        else:
+            return False
+    	#return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+    was_pub_recently.admin_order_field = 'pub_date'
+    was_pub_recently.boolean = True
+    was_pub_recently.short_description = 'Published Recently?'
 
 
 class Choice(models.Model):
